@@ -9,10 +9,10 @@ import (
 
 const (
 	EXIT rune = '0' + iota
-	SCAN
-	STRING
-	BYTE
-	RUNE
+	SCANSTYLE
+	STRINGSTYLE
+	BYTESTYLE
+	RUNESTYLE
 )
 
 const terminator = '#'
@@ -36,13 +36,13 @@ func main() {
 		return
 	}
 	switch choice {
-	case STRING:
+	case STRINGSTYLE:
 		ReadString()
-	case SCAN:
+	case SCANSTYLE:
 		ScanOperation()
-	case BYTE:
+	case BYTESTYLE:
 		ReadByte()
-	case RUNE:
+	case RUNESTYLE:
 		ReadRune()
 	case EXIT:
 		return
